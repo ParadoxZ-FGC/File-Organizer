@@ -1,5 +1,5 @@
 # Author : Noah Strekow
-# Description : Sorts the files in target directory 
+# Description : Sorts the files in target directory to proper Home directory subfolders
 
 import os
 
@@ -17,10 +17,20 @@ file_exts = {
     'doc': folders[0],
     'docx': folders[0],
     'txt': folders[0],
-    'log': folders[0],
+    'html': folders[0],
     # Data
     'csv': folders[0],
     'xlsx': folders[0],
+    'log': folders[0],
+    'bin': folders[0],
+    'iso': folders[0],
+    # Programs
+    'c': folders[0],
+    'py': folders[0],
+    'css': folders[0],
+    'js': folders[0],
+    'jar': folders[0],
+    'java': folders[0],
     # Archives
     'zip': folders[0],
     'rar': folders[0],
@@ -30,10 +40,15 @@ file_exts = {
     'jpg': folders[1],
     'jpeg': folders[1],
     'gif': folders[1],
+    'avif': folders[1],
     'svg': folders[1],
     'webp': folders[1],
+    'psd': folders[1],
+    'csp': folders[1],
+    'xcf': folders[1],
     # Videos
     'mp4': folders[2],
+    'mov': folders[2],
     'flv': folders[2],
     'avi': folders[2],
     'wmv': folders[2],
