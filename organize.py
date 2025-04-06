@@ -10,7 +10,9 @@ target = "C:/Users/NOST/Downloads/"
 target_dir = os.fsencode(target)
 
 # Folders & Dictionary of file extensions
-folders = ["C:/Users/NOST/Documents/", "C:/Users/NOST/Pictures/", "C:/Users/NOST/Videos/", "C:/Users/NOST/Music/"]
+folders = ["C:/Users/NOST/Downloads/Documents/", "C:/Users/NOST/Downloads/Pictures/", "C:/Users/NOST/Downloads/Videos/", "C:/Users/NOST/Downloads/Music/"]
+for folder in folders:
+    os.mkdir(folder)
 file_exts = {
     # Documents
     'pdf': folders[0],
@@ -57,7 +59,7 @@ file_exts = {
     'mp3': folders[3],
     'wav': folders[3],
     'ogg': folders[3],
-    # Leave others in Downloads
+    # Leave other files in Target folder
 }
 
 
@@ -69,6 +71,6 @@ if __name__ == '__main__':
         if len(filename_split) == 1:
             continue    # If no extension, skip
         ext = filename_split[len(filename_split)-1]   # Grab extension
-        dest = file_exts.get(ext, "C:/Users/NOST/Downloads/")   # Find where file should go according to extension, defualt = Misc
+        dest = file_exts.get(ext, target)   # Find where file should go according to extension, defualt = Misc
         print(f'{target_dir}, {filename}, {ext}, {dest}')
         os.rename(f"{target}{filename}", f"{dest}{filename}")    # Move file 
